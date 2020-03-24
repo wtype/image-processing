@@ -1,8 +1,4 @@
-# Jimp Personal Image Processor
-
-Still not sure if Jimp is the way to go here.
-
-## Getting Started
+# Sharp Personal Image Processor
 
 ```
 yarn
