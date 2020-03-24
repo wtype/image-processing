@@ -1,0 +1,12 @@
+{
+  "name": "image-processing",
+  "version": "1.0.0",
+  "main": "process.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ."
+  },
+  "dependencies": {
+    "jimp": "^0.9.6"
+  }
+}
