@@ -5,6 +5,7 @@ const input = 'input.jpg';
 function process(size, width) {
   sharp(input)
     .resize({ width })
+    .webp({ lossless: true })
     .toFile(`output-${size}.jpg`)
     .then(() => `Done processing ${size} image`)
     .catch(err => console.log(err));

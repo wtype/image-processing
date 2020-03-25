@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Processor</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 1.5rem;
+        color: white;
+        overflow: hidden;
+      }
+      main {
+        background: rgb(40, 45, 50);
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      input,
+      label {
+        font-size: 1.5rem;
+        cursor: pointer;
+        background: rgb(71, 79, 87);
+        text-align: center;
+      }
+      input:hover,
+      label:hover {
+        background: rgb(74, 87, 99);
+      }
+      .lighten {
+        background: rgb(79, 87, 96);
+      }
+    </style>
+  </head>
+  <body>
+    <main role="main">
+      <h1>Drag and Drop Image</h1>
+      <form>
+        <input
+          type="file"
+          name="image"
+          accept="image/*"
+          onchange="handleFiles(this.files)"
+        />
+      </form>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
