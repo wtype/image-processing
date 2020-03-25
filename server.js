@@ -5,6 +5,7 @@ const path = require('path');
 
 const image = require('./process');
 const webp = require('./webp');
+const makeDir = require('./util');
 
 const storage = multer.diskStorage({
   destination(req, file, cb) {
@@ -43,6 +44,8 @@ app.use(
 );
 
 app.post('/upload', (req, res) => {
+  makeDir();
+
   upload(req, res, err => {
     if (err) {
       console.log(err);
