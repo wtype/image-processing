@@ -19,10 +19,14 @@ async function go(filename) {
   makeDir();
 
   const promises = [
-    process(filename, 'smallest', 600),
-    process(filename, 'small', 750),
-    process(filename, 'medium', 1000),
-    process(filename, 'large', 1500),
+    process(filename, '400', 400),
+    process(filename, '640', 640),
+    process(filename, '768', 768),
+    process(filename, '1024', 1024),
+    process(filename, '1366', 1366),
+    process(filename, '1600', 1600),
+    process(filename, '1920', 1920),
+    process(filename, '2200', 2200),
   ];
 
   Promise.all(promises).then(() => {
