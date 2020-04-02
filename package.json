@@ -1,7 +1,7 @@
 {
   "name": "image-processing",
   "version": "1.0.0",
-  "main": "sharp.js",
+  "main": "process.js",
   "license": "MIT",
   "scripts": {
     "start": "node .",
