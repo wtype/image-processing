@@ -19,7 +19,7 @@
         overflow: hidden;
       }
       main {
-        background: rgb(40, 45, 50);
+        background: rgb(22, 36, 50);
         display: flex;
         width: 100%;
         height: 100vh;
@@ -37,22 +37,17 @@
       }
       input:hover,
       label:hover {
-        background: rgb(74, 87, 99);
+        background: rgb(45, 70, 97);
       }
       .lighten {
-        background: rgb(79, 87, 96);
+        background: rgb(45, 70, 97);
       }
     </style>
   </head>
   <body>
     <main role="main">
       <h1>Drag and Drop Image</h1>
-      <input
-        type="file"
-        name="image"
-        accept="image/*"
-        onchange="handleFiles(this.files)"
-      />
+      <input type="file" name="image" accept="image/*" onchange="handleFiles(this.files)" />
     </main>
     <script src="app.js"></script>
   </body>

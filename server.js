@@ -24,7 +24,8 @@ function checkFileType(file, cb) {
   if (extname && mimetype) {
     return cb(null, true);
   }
-  cb('Error: Only Images Allowed');
+  cb(new Error('Only Images Allowed'));
+  cb('Error: Only Images Allowed', false);
 }
 
 const upload = multer({
@@ -66,7 +67,7 @@ app.post('/upload', (req, res) => {
 
 app.use('/', (req, res) => {
   res.json({
-    welcome: 'Local Image Processor from wtype',
+    welcome: 'Image Processor from wtype',
   });
 });
 

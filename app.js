@@ -36,7 +36,7 @@ function uploadFile(file) {
     body: formData,
   })
     .then(() => {
-      console.log('Successfully Uploaded');
+      console.log('Uploaded');
     })
     .catch(err => {
       console.log('Error, please upload an image.\n\n', err);
