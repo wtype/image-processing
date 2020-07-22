@@ -24,8 +24,7 @@ function checkFileType(file, cb) {
   if (extname && mimetype) {
     return cb(null, true);
   }
-  cb(new Error('Only Images Allowed'));
-  cb('Error: Only Images Allowed', false);
+  cb(`ERROR: Only Images Allowed. File failed ${file.originalname}`, false);
 }
 
 const upload = multer({

@@ -14,7 +14,7 @@ function process(filename, size, width) {
         .replace(/ /g, '_')}-${size}.webp`
     )
     .then(() => `Done processing ${size} image`)
-    .catch(err => console.log(err));
+    .catch(error => new Error(error));
 }
 
 async function go(filename) {
@@ -31,8 +31,10 @@ async function go(filename) {
     process(filename, '2200', 2200),
   ];
 
-  Promise.all(promises).then(() => {
-    console.log('\x1b[33m', 'Done processing images as WebP ');
+  Promise.allSettled(promises).then(results => {
+    results.forEach(result => {
+      console.log('\x1b[33m', `Processing ${filename} as WebP. Status: ${result.status}`);
+    });
   });
 }
 
